@@ -3,6 +3,7 @@ import './App.css';
 import Header from './Header';
 import RecommendedVideo from './RecommendedVideo';
 import Sidebar from './Sidebar';
+import SearchPage from './SearchPage'
 import {
   BrowserRouter as Router,
   Switch,
@@ -17,7 +18,11 @@ function App() {
         <Header />
         < Switch >
           <Route path='/search/:searchTerm'>
-            <h1>search page</h1>
+            <div className="app__page">
+              <Sidebar />
+              <SearchPage />
+
+            </div>
           </Route>
 
           <Route path='/'>
